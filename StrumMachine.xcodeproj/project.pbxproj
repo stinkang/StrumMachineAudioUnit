@@ -1,0 +1,990 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		962C3B9C29C2D03D004CE743 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 962C3B9B29C2D03D004CE743 /* ContentView.swift */; };
+		962C3BA029C2D03D004CE743 /* ViewControllerRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 962C3B9F29C2D03D004CE743 /* ViewControllerRepresentable.swift */; };
+		962C3BA329C2D03D004CE743 /* Synth.aif in Resources */ = {isa = PBXBuildFile; fileRef = 962C3BA229C2D03D004CE743 /* Synth.aif */; };
+		962C3BA529C2D03D004CE743 /* SimplePlayEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 962C3BA429C2D03D004CE743 /* SimplePlayEngine.swift */; };
+		962C3BA829C2D03D004CE743 /* MIDIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 962C3BA729C2D03D004CE743 /* MIDIManager.swift */; };
+		962C3BAA29C2D03D004CE743 /* TypeAliases.swift in Sources */ = {isa = PBXBuildFile; fileRef = 962C3BA929C2D03D004CE743 /* TypeAliases.swift */; };
+		962C3BAD29C2D03D004CE743 /* StringHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 962C3BAC29C2D03D004CE743 /* StringHelpers.swift */; };
+		962C3BB029C2D03D004CE743 /* AudioUnitHostModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 962C3BAF29C2D03D004CE743 /* AudioUnitHostModel.swift */; };
+		962C3BB229C2D03D004CE743 /* AudioUnitViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 962C3BB129C2D03D004CE743 /* AudioUnitViewModel.swift */; };
+		962C3BB429C2D03D004CE743 /* StrumMachineApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 962C3BB329C2D03D004CE743 /* StrumMachineApp.swift */; };
+		962C3BB729C2D03D004CE743 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 962C3BB629C2D03D004CE743 /* Preview Assets.xcassets */; };
+		962C3BB929C2D03E004CE743 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 962C3BB829C2D03E004CE743 /* Assets.xcassets */; };
+		962C3BC429C2D03E004CE743 /* StrumMachineTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 962C3BC329C2D03E004CE743 /* StrumMachineTests.swift */; };
+		962C3BCE29C2D03E004CE743 /* StrumMachineUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 962C3BCD29C2D03E004CE743 /* StrumMachineUITests.swift */; };
+		962C3BD029C2D03E004CE743 /* StrumMachineUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 962C3BCF29C2D03E004CE743 /* StrumMachineUITestsLaunchTests.swift */; };
+		962C3BD629C2D03E004CE743 /* StrumMachineExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 962C3BD529C2D03E004CE743 /* StrumMachineExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		962C3BDB29C2D03E004CE743 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 962C3BDA29C2D03E004CE743 /* README.md */; };
+		962C3BE029C2D03E004CE743 /* ParameterSpecBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 962C3BDF29C2D03E004CE743 /* ParameterSpecBase.swift */; };
+		962C3BE329C2D03E004CE743 /* CrossPlatform.swift in Sources */ = {isa = PBXBuildFile; fileRef = 962C3BE229C2D03E004CE743 /* CrossPlatform.swift */; };
+		962C3BE529C2D03E004CE743 /* String+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 962C3BE429C2D03E004CE743 /* String+Utils.swift */; };
+		962C3BE929C2D03E004CE743 /* StrumMachineExtensionAudioUnit.mm in Sources */ = {isa = PBXBuildFile; fileRef = 962C3BE829C2D03E004CE743 /* StrumMachineExtensionAudioUnit.mm */; };
+		962C3BEC29C2D03E004CE743 /* StrumMachineExtensionAUProcessHelper.hpp in Resources */ = {isa = PBXBuildFile; fileRef = 962C3BEB29C2D03E004CE743 /* StrumMachineExtensionAUProcessHelper.hpp */; };
+		962C3BEE29C2D03E004CE743 /* StrumMachineExtensionBufferedAudioBus.hpp in Resources */ = {isa = PBXBuildFile; fileRef = 962C3BED29C2D03E004CE743 /* StrumMachineExtensionBufferedAudioBus.hpp */; };
+		962C3BF229C2D03E004CE743 /* Parameters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 962C3BF129C2D03E004CE743 /* Parameters.swift */; };
+		962C3BF529C2D03E004CE743 /* StrumMachineExtensionDSPKernel.hpp in Resources */ = {isa = PBXBuildFile; fileRef = 962C3BF429C2D03E004CE743 /* StrumMachineExtensionDSPKernel.hpp */; };
+		962C3BF829C2D03E004CE743 /* StrumMachineExtensionMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 962C3BF729C2D03E004CE743 /* StrumMachineExtensionMainView.swift */; };
+		962C3BFA29C2D03E004CE743 /* ParameterSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 962C3BF929C2D03E004CE743 /* ParameterSlider.swift */; };
+		962C3BFF29C2D03E004CE743 /* AudioUnitViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 962C3BFD29C2D03E004CE743 /* AudioUnitViewController.xib */; };
+		962C3C0129C2D03E004CE743 /* ObservableAUParameter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 962C3C0029C2D03E004CE743 /* ObservableAUParameter.swift */; };
+		962C3C0329C2D03E004CE743 /* AudioUnitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 962C3C0229C2D03E004CE743 /* AudioUnitViewController.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		962C3BC029C2D03E004CE743 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 962C3B9029C2D03D004CE743 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 962C3B9729C2D03D004CE743;
+			remoteInfo = StrumMachine;
+		};
+		962C3BCA29C2D03E004CE743 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 962C3B9029C2D03D004CE743 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 962C3B9729C2D03D004CE743;
+			remoteInfo = StrumMachine;
+		};
+		962C3BD729C2D03E004CE743 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 962C3B9029C2D03D004CE743 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 962C3BD429C2D03E004CE743;
+			remoteInfo = StrumMachineExtension;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		962C3C0A29C2D03E004CE743 /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				962C3BD629C2D03E004CE743 /* StrumMachineExtension.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		962C3B9829C2D03D004CE743 /* StrumMachine.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StrumMachine.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		962C3B9B29C2D03D004CE743 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		962C3B9F29C2D03D004CE743 /* ViewControllerRepresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerRepresentable.swift; sourceTree = "<group>"; };
+		962C3BA229C2D03D004CE743 /* Synth.aif */ = {isa = PBXFileReference; lastKnownFileType = file; path = Synth.aif; sourceTree = "<group>"; };
+		962C3BA429C2D03D004CE743 /* SimplePlayEngine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimplePlayEngine.swift; sourceTree = "<group>"; };
+		962C3BA729C2D03D004CE743 /* MIDIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MIDIManager.swift; sourceTree = "<group>"; };
+		962C3BA929C2D03D004CE743 /* TypeAliases.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypeAliases.swift; sourceTree = "<group>"; };
+		962C3BAC29C2D03D004CE743 /* StringHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringHelpers.swift; sourceTree = "<group>"; };
+		962C3BAF29C2D03D004CE743 /* AudioUnitHostModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioUnitHostModel.swift; sourceTree = "<group>"; };
+		962C3BB129C2D03D004CE743 /* AudioUnitViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioUnitViewModel.swift; sourceTree = "<group>"; };
+		962C3BB329C2D03D004CE743 /* StrumMachineApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StrumMachineApp.swift; sourceTree = "<group>"; };
+		962C3BB629C2D03D004CE743 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		962C3BB829C2D03E004CE743 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		962C3BBA29C2D03E004CE743 /* StrumMachine.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = StrumMachine.entitlements; sourceTree = "<group>"; };
+		962C3BBF29C2D03E004CE743 /* StrumMachineTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = StrumMachineTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		962C3BC329C2D03E004CE743 /* StrumMachineTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StrumMachineTests.swift; sourceTree = "<group>"; };
+		962C3BC929C2D03E004CE743 /* StrumMachineUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = StrumMachineUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		962C3BCD29C2D03E004CE743 /* StrumMachineUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StrumMachineUITests.swift; sourceTree = "<group>"; };
+		962C3BCF29C2D03E004CE743 /* StrumMachineUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StrumMachineUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		962C3BD529C2D03E004CE743 /* StrumMachineExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = StrumMachineExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		962C3BDA29C2D03E004CE743 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		962C3BDD29C2D03E004CE743 /* StrumMachineExtension-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "StrumMachineExtension-Bridging-Header.h"; sourceTree = "<group>"; };
+		962C3BDF29C2D03E004CE743 /* ParameterSpecBase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParameterSpecBase.swift; sourceTree = "<group>"; };
+		962C3BE229C2D03E004CE743 /* CrossPlatform.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CrossPlatform.swift; sourceTree = "<group>"; };
+		962C3BE429C2D03E004CE743 /* String+Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Utils.swift"; sourceTree = "<group>"; };
+		962C3BE729C2D03E004CE743 /* StrumMachineExtensionAudioUnit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = StrumMachineExtensionAudioUnit.h; sourceTree = "<group>"; };
+		962C3BE829C2D03E004CE743 /* StrumMachineExtensionAudioUnit.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = StrumMachineExtensionAudioUnit.mm; sourceTree = "<group>"; };
+		962C3BEB29C2D03E004CE743 /* StrumMachineExtensionAUProcessHelper.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = StrumMachineExtensionAUProcessHelper.hpp; sourceTree = "<group>"; };
+		962C3BED29C2D03E004CE743 /* StrumMachineExtensionBufferedAudioBus.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = StrumMachineExtensionBufferedAudioBus.hpp; sourceTree = "<group>"; };
+		962C3BF029C2D03E004CE743 /* StrumMachineExtensionParameterAddresses.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = StrumMachineExtensionParameterAddresses.h; sourceTree = "<group>"; };
+		962C3BF129C2D03E004CE743 /* Parameters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Parameters.swift; sourceTree = "<group>"; };
+		962C3BF429C2D03E004CE743 /* StrumMachineExtensionDSPKernel.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = StrumMachineExtensionDSPKernel.hpp; sourceTree = "<group>"; };
+		962C3BF729C2D03E004CE743 /* StrumMachineExtensionMainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StrumMachineExtensionMainView.swift; sourceTree = "<group>"; };
+		962C3BF929C2D03E004CE743 /* ParameterSlider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParameterSlider.swift; sourceTree = "<group>"; };
+		962C3BFE29C2D03E004CE743 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = AudioUnitViewController.xib; sourceTree = "<group>"; };
+		962C3C0029C2D03E004CE743 /* ObservableAUParameter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObservableAUParameter.swift; sourceTree = "<group>"; };
+		962C3C0229C2D03E004CE743 /* AudioUnitViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioUnitViewController.swift; sourceTree = "<group>"; };
+		962C3C0429C2D03E004CE743 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		962C3B9529C2D03D004CE743 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		962C3BBC29C2D03E004CE743 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		962C3BC629C2D03E004CE743 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		962C3BD229C2D03E004CE743 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		962C3B8F29C2D03D004CE743 = {
+			isa = PBXGroup;
+			children = (
+				962C3B9A29C2D03D004CE743 /* StrumMachine */,
+				962C3BC229C2D03E004CE743 /* StrumMachineTests */,
+				962C3BCC29C2D03E004CE743 /* StrumMachineUITests */,
+				962C3BD929C2D03E004CE743 /* StrumMachineExtension */,
+				962C3B9929C2D03D004CE743 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		962C3B9929C2D03D004CE743 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				962C3B9829C2D03D004CE743 /* StrumMachine.app */,
+				962C3BBF29C2D03E004CE743 /* StrumMachineTests.xctest */,
+				962C3BC929C2D03E004CE743 /* StrumMachineUITests.xctest */,
+				962C3BD529C2D03E004CE743 /* StrumMachineExtension.appex */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		962C3B9A29C2D03D004CE743 /* StrumMachine */ = {
+			isa = PBXGroup;
+			children = (
+				962C3B9B29C2D03D004CE743 /* ContentView.swift */,
+				962C3BB329C2D03D004CE743 /* StrumMachineApp.swift */,
+				962C3BB829C2D03E004CE743 /* Assets.xcassets */,
+				962C3BBA29C2D03E004CE743 /* StrumMachine.entitlements */,
+				962C3B9D29C2D03D004CE743 /* Common */,
+				962C3BAE29C2D03D004CE743 /* Model */,
+				962C3BB529C2D03D004CE743 /* Preview Content */,
+			);
+			path = StrumMachine;
+			sourceTree = "<group>";
+		};
+		962C3B9D29C2D03D004CE743 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				962C3BA929C2D03D004CE743 /* TypeAliases.swift */,
+				962C3B9E29C2D03D004CE743 /* UI */,
+				962C3BA129C2D03D004CE743 /* Audio */,
+				962C3BA629C2D03D004CE743 /* MIDI */,
+				962C3BAB29C2D03D004CE743 /* String */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		962C3B9E29C2D03D004CE743 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				962C3B9F29C2D03D004CE743 /* ViewControllerRepresentable.swift */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		962C3BA129C2D03D004CE743 /* Audio */ = {
+			isa = PBXGroup;
+			children = (
+				962C3BA229C2D03D004CE743 /* Synth.aif */,
+				962C3BA429C2D03D004CE743 /* SimplePlayEngine.swift */,
+			);
+			path = Audio;
+			sourceTree = "<group>";
+		};
+		962C3BA629C2D03D004CE743 /* MIDI */ = {
+			isa = PBXGroup;
+			children = (
+				962C3BA729C2D03D004CE743 /* MIDIManager.swift */,
+			);
+			path = MIDI;
+			sourceTree = "<group>";
+		};
+		962C3BAB29C2D03D004CE743 /* String */ = {
+			isa = PBXGroup;
+			children = (
+				962C3BAC29C2D03D004CE743 /* StringHelpers.swift */,
+			);
+			path = String;
+			sourceTree = "<group>";
+		};
+		962C3BAE29C2D03D004CE743 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				962C3BAF29C2D03D004CE743 /* AudioUnitHostModel.swift */,
+				962C3BB129C2D03D004CE743 /* AudioUnitViewModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		962C3BB529C2D03D004CE743 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				962C3BB629C2D03D004CE743 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		962C3BC229C2D03E004CE743 /* StrumMachineTests */ = {
+			isa = PBXGroup;
+			children = (
+				962C3BC329C2D03E004CE743 /* StrumMachineTests.swift */,
+			);
+			path = StrumMachineTests;
+			sourceTree = "<group>";
+		};
+		962C3BCC29C2D03E004CE743 /* StrumMachineUITests */ = {
+			isa = PBXGroup;
+			children = (
+				962C3BCD29C2D03E004CE743 /* StrumMachineUITests.swift */,
+				962C3BCF29C2D03E004CE743 /* StrumMachineUITestsLaunchTests.swift */,
+			);
+			path = StrumMachineUITests;
+			sourceTree = "<group>";
+		};
+		962C3BD929C2D03E004CE743 /* StrumMachineExtension */ = {
+			isa = PBXGroup;
+			children = (
+				962C3BDA29C2D03E004CE743 /* README.md */,
+				962C3C0429C2D03E004CE743 /* Info.plist */,
+				962C3BDC29C2D03E004CE743 /* Common */,
+				962C3BEF29C2D03E004CE743 /* Parameters */,
+				962C3BF329C2D03E004CE743 /* DSP */,
+				962C3BF629C2D03E004CE743 /* UI */,
+			);
+			path = StrumMachineExtension;
+			sourceTree = "<group>";
+		};
+		962C3BDC29C2D03E004CE743 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				962C3BDD29C2D03E004CE743 /* StrumMachineExtension-Bridging-Header.h */,
+				962C3BDE29C2D03E004CE743 /* Parameters */,
+				962C3BE129C2D03E004CE743 /* Utility */,
+				962C3BE629C2D03E004CE743 /* Audio Unit */,
+				962C3BEA29C2D03E004CE743 /* DSP */,
+				962C3BFB29C2D03E004CE743 /* UI */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		962C3BDE29C2D03E004CE743 /* Parameters */ = {
+			isa = PBXGroup;
+			children = (
+				962C3BDF29C2D03E004CE743 /* ParameterSpecBase.swift */,
+			);
+			path = Parameters;
+			sourceTree = "<group>";
+		};
+		962C3BE129C2D03E004CE743 /* Utility */ = {
+			isa = PBXGroup;
+			children = (
+				962C3BE229C2D03E004CE743 /* CrossPlatform.swift */,
+				962C3BE429C2D03E004CE743 /* String+Utils.swift */,
+			);
+			path = Utility;
+			sourceTree = "<group>";
+		};
+		962C3BE629C2D03E004CE743 /* Audio Unit */ = {
+			isa = PBXGroup;
+			children = (
+				962C3BE729C2D03E004CE743 /* StrumMachineExtensionAudioUnit.h */,
+				962C3BE829C2D03E004CE743 /* StrumMachineExtensionAudioUnit.mm */,
+			);
+			path = "Audio Unit";
+			sourceTree = "<group>";
+		};
+		962C3BEA29C2D03E004CE743 /* DSP */ = {
+			isa = PBXGroup;
+			children = (
+				962C3BEB29C2D03E004CE743 /* StrumMachineExtensionAUProcessHelper.hpp */,
+				962C3BED29C2D03E004CE743 /* StrumMachineExtensionBufferedAudioBus.hpp */,
+			);
+			path = DSP;
+			sourceTree = "<group>";
+		};
+		962C3BEF29C2D03E004CE743 /* Parameters */ = {
+			isa = PBXGroup;
+			children = (
+				962C3BF029C2D03E004CE743 /* StrumMachineExtensionParameterAddresses.h */,
+				962C3BF129C2D03E004CE743 /* Parameters.swift */,
+			);
+			path = Parameters;
+			sourceTree = "<group>";
+		};
+		962C3BF329C2D03E004CE743 /* DSP */ = {
+			isa = PBXGroup;
+			children = (
+				962C3BF429C2D03E004CE743 /* StrumMachineExtensionDSPKernel.hpp */,
+			);
+			path = DSP;
+			sourceTree = "<group>";
+		};
+		962C3BF629C2D03E004CE743 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				962C3BF729C2D03E004CE743 /* StrumMachineExtensionMainView.swift */,
+				962C3BF929C2D03E004CE743 /* ParameterSlider.swift */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		962C3BFB29C2D03E004CE743 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				962C3C0029C2D03E004CE743 /* ObservableAUParameter.swift */,
+				962C3C0229C2D03E004CE743 /* AudioUnitViewController.swift */,
+				962C3BFC29C2D03E004CE743 /* Base.lproj */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		962C3BFC29C2D03E004CE743 /* Base.lproj */ = {
+			isa = PBXGroup;
+			children = (
+				962C3BFD29C2D03E004CE743 /* AudioUnitViewController.xib */,
+			);
+			path = Base.lproj;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		962C3B9729C2D03D004CE743 /* StrumMachine */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 962C3C0B29C2D03E004CE743 /* Build configuration list for PBXNativeTarget "StrumMachine" */;
+			buildPhases = (
+				962C3B9429C2D03D004CE743 /* Sources */,
+				962C3B9529C2D03D004CE743 /* Frameworks */,
+				962C3B9629C2D03D004CE743 /* Resources */,
+				962C3C0A29C2D03E004CE743 /* Embed Foundation Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				962C3BD829C2D03E004CE743 /* PBXTargetDependency */,
+			);
+			name = StrumMachine;
+			productName = StrumMachine;
+			productReference = 962C3B9829C2D03D004CE743 /* StrumMachine.app */;
+			productType = "com.apple.product-type.application";
+		};
+		962C3BBE29C2D03E004CE743 /* StrumMachineTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 962C3C0E29C2D03E004CE743 /* Build configuration list for PBXNativeTarget "StrumMachineTests" */;
+			buildPhases = (
+				962C3BBB29C2D03E004CE743 /* Sources */,
+				962C3BBC29C2D03E004CE743 /* Frameworks */,
+				962C3BBD29C2D03E004CE743 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				962C3BC129C2D03E004CE743 /* PBXTargetDependency */,
+			);
+			name = StrumMachineTests;
+			productName = StrumMachineTests;
+			productReference = 962C3BBF29C2D03E004CE743 /* StrumMachineTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		962C3BC829C2D03E004CE743 /* StrumMachineUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 962C3C1129C2D03E004CE743 /* Build configuration list for PBXNativeTarget "StrumMachineUITests" */;
+			buildPhases = (
+				962C3BC529C2D03E004CE743 /* Sources */,
+				962C3BC629C2D03E004CE743 /* Frameworks */,
+				962C3BC729C2D03E004CE743 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				962C3BCB29C2D03E004CE743 /* PBXTargetDependency */,
+			);
+			name = StrumMachineUITests;
+			productName = StrumMachineUITests;
+			productReference = 962C3BC929C2D03E004CE743 /* StrumMachineUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+		962C3BD429C2D03E004CE743 /* StrumMachineExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 962C3C0729C2D03E004CE743 /* Build configuration list for PBXNativeTarget "StrumMachineExtension" */;
+			buildPhases = (
+				962C3BD129C2D03E004CE743 /* Sources */,
+				962C3BD229C2D03E004CE743 /* Frameworks */,
+				962C3BD329C2D03E004CE743 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = StrumMachineExtension;
+			productName = StrumMachineExtension;
+			productReference = 962C3BD529C2D03E004CE743 /* StrumMachineExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		962C3B9029C2D03D004CE743 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1420;
+				LastUpgradeCheck = 1420;
+				TargetAttributes = {
+					962C3B9729C2D03D004CE743 = {
+						CreatedOnToolsVersion = 14.2;
+					};
+					962C3BBE29C2D03E004CE743 = {
+						CreatedOnToolsVersion = 14.2;
+						TestTargetID = 962C3B9729C2D03D004CE743;
+					};
+					962C3BC829C2D03E004CE743 = {
+						CreatedOnToolsVersion = 14.2;
+						TestTargetID = 962C3B9729C2D03D004CE743;
+					};
+					962C3BD429C2D03E004CE743 = {
+						CreatedOnToolsVersion = 14.2;
+					};
+				};
+			};
+			buildConfigurationList = 962C3B9329C2D03D004CE743 /* Build configuration list for PBXProject "StrumMachine" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 962C3B8F29C2D03D004CE743;
+			productRefGroup = 962C3B9929C2D03D004CE743 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				962C3B9729C2D03D004CE743 /* StrumMachine */,
+				962C3BBE29C2D03E004CE743 /* StrumMachineTests */,
+				962C3BC829C2D03E004CE743 /* StrumMachineUITests */,
+				962C3BD429C2D03E004CE743 /* StrumMachineExtension */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		962C3B9629C2D03D004CE743 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				962C3BB729C2D03D004CE743 /* Preview Assets.xcassets in Resources */,
+				962C3BB929C2D03E004CE743 /* Assets.xcassets in Resources */,
+				962C3BA329C2D03D004CE743 /* Synth.aif in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		962C3BBD29C2D03E004CE743 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		962C3BC729C2D03E004CE743 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		962C3BD329C2D03E004CE743 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				962C3BEC29C2D03E004CE743 /* StrumMachineExtensionAUProcessHelper.hpp in Resources */,
+				962C3BFF29C2D03E004CE743 /* AudioUnitViewController.xib in Resources */,
+				962C3BF529C2D03E004CE743 /* StrumMachineExtensionDSPKernel.hpp in Resources */,
+				962C3BDB29C2D03E004CE743 /* README.md in Resources */,
+				962C3BEE29C2D03E004CE743 /* StrumMachineExtensionBufferedAudioBus.hpp in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		962C3B9429C2D03D004CE743 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				962C3BB029C2D03D004CE743 /* AudioUnitHostModel.swift in Sources */,
+				962C3BB229C2D03D004CE743 /* AudioUnitViewModel.swift in Sources */,
+				962C3B9C29C2D03D004CE743 /* ContentView.swift in Sources */,
+				962C3BA029C2D03D004CE743 /* ViewControllerRepresentable.swift in Sources */,
+				962C3BB429C2D03D004CE743 /* StrumMachineApp.swift in Sources */,
+				962C3BAD29C2D03D004CE743 /* StringHelpers.swift in Sources */,
+				962C3BA829C2D03D004CE743 /* MIDIManager.swift in Sources */,
+				962C3BAA29C2D03D004CE743 /* TypeAliases.swift in Sources */,
+				962C3BA529C2D03D004CE743 /* SimplePlayEngine.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		962C3BBB29C2D03E004CE743 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				962C3BC429C2D03E004CE743 /* StrumMachineTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		962C3BC529C2D03E004CE743 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				962C3BD029C2D03E004CE743 /* StrumMachineUITestsLaunchTests.swift in Sources */,
+				962C3BCE29C2D03E004CE743 /* StrumMachineUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		962C3BD129C2D03E004CE743 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				962C3BF229C2D03E004CE743 /* Parameters.swift in Sources */,
+				962C3BF829C2D03E004CE743 /* StrumMachineExtensionMainView.swift in Sources */,
+				962C3C0129C2D03E004CE743 /* ObservableAUParameter.swift in Sources */,
+				962C3BE929C2D03E004CE743 /* StrumMachineExtensionAudioUnit.mm in Sources */,
+				962C3BE029C2D03E004CE743 /* ParameterSpecBase.swift in Sources */,
+				962C3C0329C2D03E004CE743 /* AudioUnitViewController.swift in Sources */,
+				962C3BFA29C2D03E004CE743 /* ParameterSlider.swift in Sources */,
+				962C3BE329C2D03E004CE743 /* CrossPlatform.swift in Sources */,
+				962C3BE529C2D03E004CE743 /* String+Utils.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		962C3BC129C2D03E004CE743 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 962C3B9729C2D03D004CE743 /* StrumMachine */;
+			targetProxy = 962C3BC029C2D03E004CE743 /* PBXContainerItemProxy */;
+		};
+		962C3BCB29C2D03E004CE743 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 962C3B9729C2D03D004CE743 /* StrumMachine */;
+			targetProxy = 962C3BCA29C2D03E004CE743 /* PBXContainerItemProxy */;
+		};
+		962C3BD829C2D03E004CE743 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 962C3BD429C2D03E004CE743 /* StrumMachineExtension */;
+			targetProxy = 962C3BD729C2D03E004CE743 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		962C3BFD29C2D03E004CE743 /* AudioUnitViewController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				962C3BFE29C2D03E004CE743 /* Base */,
+			);
+			name = AudioUnitViewController.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		962C3C0529C2D03E004CE743 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 13.1;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		962C3C0629C2D03E004CE743 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 13.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+			};
+			name = Release;
+		};
+		962C3C0829C2D03E004CE743 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "c++20";
+				CLANG_CXX_LIBRARY = "libc++";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = RS4G7N7VG4;
+				ENABLE_APP_SANDBOX = YES;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_USER_SELECTED_FILES = readonly;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = StrumMachineExtension/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = StrumMachineExtension;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@executable_path/../../../../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 13.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = BeatMachine.StrumMachine.StrumMachineExtension;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "StrumMachineExtension/Common/StrumMachineExtension-Bridging-Header.h";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		962C3C0929C2D03E004CE743 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "c++20";
+				CLANG_CXX_LIBRARY = "libc++";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = RS4G7N7VG4;
+				ENABLE_APP_SANDBOX = YES;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_USER_SELECTED_FILES = readonly;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = StrumMachineExtension/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = StrumMachineExtension;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@executable_path/../../../../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 13.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = BeatMachine.StrumMachine.StrumMachineExtension;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "StrumMachineExtension/Common/StrumMachineExtension-Bridging-Header.h";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		962C3C0C29C2D03E004CE743 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = StrumMachine/StrumMachine.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"StrumMachine/Preview Content\"";
+				DEVELOPMENT_TEAM = RS4G7N7VG4;
+				ENABLE_APP_SANDBOX = YES;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				ENABLE_USER_SELECTED_FILES = readonly;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = StrumMachine;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 13.0;
+				MARKETING_VERSION = 1.0;
+				OTHER_LDFLAGS = (
+					"-framework",
+					AudioToolbox,
+					"-framework",
+					AVFoundation,
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = BeatMachine.StrumMachine;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		962C3C0D29C2D03E004CE743 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = StrumMachine/StrumMachine.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"StrumMachine/Preview Content\"";
+				DEVELOPMENT_TEAM = RS4G7N7VG4;
+				ENABLE_APP_SANDBOX = YES;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				ENABLE_USER_SELECTED_FILES = readonly;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = StrumMachine;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 13.0;
+				MARKETING_VERSION = 1.0;
+				OTHER_LDFLAGS = (
+					"-framework",
+					AudioToolbox,
+					"-framework",
+					AVFoundation,
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = BeatMachine.StrumMachine;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		962C3C0F29C2D03E004CE743 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = RS4G7N7VG4;
+				GENERATE_INFOPLIST_FILE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 13.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = BeatMachine.StrumMachineTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/StrumMachine.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/StrumMachine";
+			};
+			name = Debug;
+		};
+		962C3C1029C2D03E004CE743 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = RS4G7N7VG4;
+				GENERATE_INFOPLIST_FILE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 13.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = BeatMachine.StrumMachineTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/StrumMachine.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/StrumMachine";
+			};
+			name = Release;
+		};
+		962C3C1229C2D03E004CE743 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = RS4G7N7VG4;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = BeatMachine.StrumMachineUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_TARGET_NAME = StrumMachine;
+			};
+			name = Debug;
+		};
+		962C3C1329C2D03E004CE743 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = RS4G7N7VG4;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = BeatMachine.StrumMachineUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_TARGET_NAME = StrumMachine;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		962C3B9329C2D03D004CE743 /* Build configuration list for PBXProject "StrumMachine" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				962C3C0529C2D03E004CE743 /* Debug */,
+				962C3C0629C2D03E004CE743 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		962C3C0729C2D03E004CE743 /* Build configuration list for PBXNativeTarget "StrumMachineExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				962C3C0829C2D03E004CE743 /* Debug */,
+				962C3C0929C2D03E004CE743 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		962C3C0B29C2D03E004CE743 /* Build configuration list for PBXNativeTarget "StrumMachine" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				962C3C0C29C2D03E004CE743 /* Debug */,
+				962C3C0D29C2D03E004CE743 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		962C3C0E29C2D03E004CE743 /* Build configuration list for PBXNativeTarget "StrumMachineTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				962C3C0F29C2D03E004CE743 /* Debug */,
+				962C3C1029C2D03E004CE743 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		962C3C1129C2D03E004CE743 /* Build configuration list for PBXNativeTarget "StrumMachineUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				962C3C1229C2D03E004CE743 /* Debug */,
+				962C3C1329C2D03E004CE743 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 962C3B9029C2D03D004CE743 /* Project object */;
+}
