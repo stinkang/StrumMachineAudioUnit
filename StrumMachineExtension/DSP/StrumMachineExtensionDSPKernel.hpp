@@ -120,15 +120,19 @@ public:
         for (UInt32 channel = 0; channel < inputBuffers.size(); ++channel) {
             for (UInt32 frameIndex = 0; frameIndex < frameCount; ++frameIndex) {
                 double currentPositionInChunk = fmod(mCurrentPosition, samplesPerChunk);
+                float gain = 1.0f;
 
-                if (currentPositionInChunk < mSampleRate) {
-                    // Normal audio playback
-                    outputBuffers[channel][frameIndex] = inputBuffers[channel][frameIndex] * mGain;
-                } else {
+                if (currentPositionInChunk < crossfadeSamples) {
+                    // Fade in
+                    gain = currentPositionInChunk / crossfadeSamples;
+                } else if (currentPositionInChunk >= mSampleRate - crossfadeSamples && currentPositionInChunk < mSampleRate) {
+                    // Fade out
+                    gain = (mSampleRate - currentPositionInChunk) / crossfadeSamples;
+                } else if (currentPositionInChunk >= mSampleRate) {
                     // Gap in the audio
-                    outputBuffers[channel][frameIndex] = 0.0f;
+                    gain = 0.0f;
                 }
-                
+                outputBuffers[channel][frameIndex] = inputBuffers[channel][frameIndex] * mGain * gain;
                 mCurrentPosition++;
             }
         }
@@ -158,6 +162,8 @@ public:
     double mStrum = 0.0;
     bool mBypassed = false;
     double mCurrentPosition = 0.0;
+    double mCrossfadeDuration = 0.005; // 5ms crossfade duration
+    double crossfadeSamples = 0.01 * 44100.0; // crossfade duration times sample rate
 
     AUAudioFrameCount mMaxFramesToRender = 1024;
 };
