@@ -44,6 +44,9 @@ public:
                 mGain = value;
                 break;
                 // Add a case for each parameter in StrumMachineExtensionParameterAddresses.h
+            case StrumMachineExtensionParameterAddress::strum:
+                mStrum = value;
+                break;
         }
     }
     
@@ -53,6 +56,9 @@ public:
         switch (address) {
             case StrumMachineExtensionParameterAddress::gain:
                 return (AUValue)mGain;
+                
+            case StrumMachineExtensionParameterAddress::strum:
+                return (AUValue)mStrum;
                 
             default: return 0.f;
         }
@@ -93,6 +99,10 @@ public:
             return;
         }
         
+        double samplesPerGap = mSampleRate * mStrum;
+        double samplesPerChunk = samplesPerGap + mSampleRate; // One chunk is audio + gap
+
+        
         // Use this to get Musical context info from the Plugin Host,
         // Replace nullptr with &memberVariable according to the AUHostMusicalContextBlock function signature
         /*
@@ -109,9 +119,17 @@ public:
         // Perform per sample dsp on the incoming float in before assigning it to out
         for (UInt32 channel = 0; channel < inputBuffers.size(); ++channel) {
             for (UInt32 frameIndex = 0; frameIndex < frameCount; ++frameIndex) {
+                double currentPositionInChunk = fmod(mCurrentPosition, samplesPerChunk);
+
+                if (currentPositionInChunk < mSampleRate) {
+                    // Normal audio playback
+                    outputBuffers[channel][frameIndex] = inputBuffers[channel][frameIndex] * mGain;
+                } else {
+                    // Gap in the audio
+                    outputBuffers[channel][frameIndex] = 0.0f;
+                }
                 
-                // Do your sample by sample dsp here...
-                outputBuffers[channel][frameIndex] = inputBuffers[channel][frameIndex] * mGain;
+                mCurrentPosition++;
             }
         }
     }
@@ -137,6 +155,9 @@ public:
     
     double mSampleRate = 44100.0;
     double mGain = 1.0;
+    double mStrum = 0.0;
     bool mBypassed = false;
+    double mCurrentPosition = 0.0;
+
     AUAudioFrameCount mMaxFramesToRender = 1024;
 };

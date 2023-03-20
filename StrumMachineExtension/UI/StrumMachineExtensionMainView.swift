@@ -12,5 +12,6 @@ struct StrumMachineExtensionMainView: View {
     
     var body: some View {
         ParameterSlider(param: parameterTree.global.gain)
+        ParameterSlider(param: parameterTree.global.strum)
     }
 }

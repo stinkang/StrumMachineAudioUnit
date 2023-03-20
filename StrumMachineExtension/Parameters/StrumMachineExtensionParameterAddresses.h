@@ -14,7 +14,8 @@ namespace StrumMachineExtensionParameterAddress {
 #endif
 
 typedef NS_ENUM(AUParameterAddress, StrumMachineExtensionParameterAddress) {
-    gain = 0
+    gain = 0,
+    strum = 1
 };
 
 #ifdef __cplusplus

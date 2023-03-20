@@ -18,6 +18,14 @@ let StrumMachineExtensionParameterSpecs = ParameterTreeSpec {
             valueRange: 0.0...1.0,
             defaultValue: 0.25
         )
+        ParameterSpec(
+            address: .strum,
+            identifier: "strum",
+            name: "Strum",
+            units: .percent,
+            valueRange: 0.0...1.0,
+            defaultValue: 0.0
+        )
     }
 }
 
